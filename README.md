@@ -1,4 +1,4 @@
-# AI Content Developer
+# AI Content Developer (HOWDY 🤠)
 
 An intelligent documentation generation tool that analyzes repositories and creates or updates documentation based on support materials using Azure OpenAI models.
 
@@ -1038,13 +1038,11 @@ Clean up outputs or perform reset operations:
 
 ## License
 
-MIT License - see LICENSE file for details
-
 ## Acknowledgments
 
-- OpenAI for GPT models
-- Azure documentation team for inspiration
-- Contributors and testers
+## Support
+
+Reach out to me at doveychase@microsoft.com if you run into issues. Please send me a zip file containing your logs, screenshots, any other helpful information or steps to replicate the issue so that I may assist.
 
 ---
 
