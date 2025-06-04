@@ -1,0 +1,21 @@
+---
+description: Phase-specific implementation guidance
+globs: main.py, content_developer/orchestrator/*.py
+alwaysApply: false
+---
+
+# Phase Workflow
+
+## Phase 1: Analysis
+- Clone repo → [RepositoryManager](mdc:content_developer/repository/manager.py)
+- Process materials → [MaterialProcessor](mdc:content_developer/processors/material.py)
+- Detect directory → [DirectoryDetector](mdc:content_developer/processors/directory.py)
+
+## Phase 2: Strategy
+- Discover content → [ContentDiscoveryProcessor](mdc:content_developer/processors/discovery.py)
+- Generate embeddings → [UnifiedCache](mdc:content_developer/cache/unified_cache.py)
+- Create strategy → [ContentStrategyProcessor](mdc:content_developer/processors/strategy.py)
+
+## Phase 3: Generation
+- Load materials → [MaterialContentLoader](mdc:content_developer/generation/material_loader.py)
+- Generate content → [ContentGenerator](mdc:content_developer/generation/content_generator.py)

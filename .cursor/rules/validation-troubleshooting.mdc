@@ -1,0 +1,39 @@
+---
+description: Comprehensive troubleshooting guide for errors and validation
+globs: 
+alwaysApply: false
+---
+
+# Validation & Troubleshooting
+
+Access with @validation-troubleshooting.
+
+## Quick Health Check
+```bash
+./scripts/health_check.sh
+```
+
+## Common Errors
+
+### Environment
+- **No API key**: `export OPENAI_API_KEY="key"`
+- **Import error**: `export PYTHONPATH=$PYTHONPATH:$(pwd)`
+- **Missing deps**: `pip install -r requirements.txt`
+
+### Runtime
+- **Cache corrupt**: `./scripts/reset.sh cache`
+- **Type error**: Check `_ensure_float_list()` in processors
+- **No materials**: Provide at least one material file
+
+### API Issues
+- **Rate limit**: Wait and retry
+- **Timeout**: Check network, reduce batch size
+
+## Reset Options
+```bash
+./scripts/reset.sh help     # Show options
+./scripts/reset.sh cache    # Clear embeddings only
+./scripts/reset.sh full     # Complete reset
+```
+
+See full guide: [validation-troubleshooting.mdc](mdc:.cursor/rules/validation-troubleshooting.mdc)

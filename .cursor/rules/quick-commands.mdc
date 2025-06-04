@@ -1,0 +1,31 @@
+---
+description: Quick reference for common commands and scripts
+globs: 
+alwaysApply: true
+---
+
+# Quick Commands
+
+## Scripts
+- `./scripts/health_check.sh` - Check setup
+- `./scripts/test_run.sh` - Test all phases
+- `./scripts/reset.sh [option]` - Reset tool
+
+## Common Commands
+```bash
+# Test phase 1 only
+python main.py <repo> "<goal>" "<service>" mat.pdf --phases 1
+
+# Debug mode
+python main.py <args> --debug-similarity
+
+# Auto-confirm
+python main.py <args> --auto-confirm
+```
+
+## Fix Issues
+```bash
+export OPENAI_API_KEY="key"
+export PYTHONPATH=$PYTHONPATH:$(pwd)
+rm -rf llm_outputs/embeddings/
+```

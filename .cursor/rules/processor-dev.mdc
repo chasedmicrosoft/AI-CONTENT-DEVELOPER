@@ -1,0 +1,25 @@
+---
+description: Patterns for developing processors
+globs: content_developer/processors/*.py, content_developer/generation/*_processor.py
+alwaysApply: false
+---
+
+# Processor Patterns
+
+## Base Pattern
+```python
+class MyProcessor(SmartProcessor):
+    def process(self, *args, **kwargs):
+        return self._process(*args, **kwargs)
+    
+    def _process(self, *args, **kwargs):
+        validated = self._validate_input(args)
+        result = self._perform_operation(validated)
+        return self._format_output(result)
+```
+
+## Key Methods
+- `llm_call()` - Make AI calls
+- `save_interaction()` - Save to llm_outputs/
+- `_ensure_float_list()` - Convert embeddings
+- Always use `mkdir()` before saving
