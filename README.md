@@ -7,6 +7,7 @@ An intelligent documentation generation tool that analyzes repositories and crea
 ## Overview
 
 AI Content Developer automates the process of creating and updating technical documentation by:
+
 - Analyzing your repository structure
 - Processing support materials (PDFs, Word docs, markdown files, URLs)
 - Identifying content gaps through semantic analysis
@@ -825,20 +826,11 @@ For more details, see the [DefaultAzureCredential documentation](https://learn.m
 
 ```
 ./llm_outputs/
-├── materials_summary/          # Processed material summaries
-├── decisions/
-│   └── working_directory/      # Directory selection decisions
-├── content_strategy/           # Strategy analysis results
 ├── embeddings/                 # Cached embeddings by repo/directory
 │   └── [repo]/[directory]/     # Organized by repository and working directory
-├── content_generation/
-│   └── create/                 # New content generation logs
-├── generation/                 # Content update logs
-├── toc_management/             # TOC update logs
 └── preview/
-    ├── [repo]/[directory]/
-    │   ├── create/             # Preview of new files
-    │   └── updates/            # Preview of updated files
+    ├── create/             # Preview of new files
+    ├── updates/            # Preview of updated files
     └── toc/                    # Preview of TOC changes
 ```
 
