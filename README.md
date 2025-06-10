@@ -1235,6 +1235,9 @@ MIT License - see LICENSE file for details
 
 For more information, issues, or contributions, visit the [GitHub repository](https://github.com/chasedmicrosoft/ai-content-developer).
 
+---
+
+```mermaid
 graph LR
     subgraph "Input Data"
         repo["Repository URL"]
@@ -1315,8 +1318,11 @@ graph LR
     style materials fill:#f9f,stroke:#333,stroke-width:2px
     style p4_final fill:#9f9,stroke:#333,stroke-width:3px
     style p5_toc fill:#9f9,stroke:#333,stroke-width:3px
+```
 
-# 1. ENTRY POINT
+## 1. ENTRY POINT
+
+```markdown
 main()
 ├── create_argument_parser()
 ├── parser.parse_args()
@@ -1436,3 +1442,4 @@ main()
                 └── if TOC changes:
                     ├── read() → from preview
                     └── write() → TOC.yml
+```
