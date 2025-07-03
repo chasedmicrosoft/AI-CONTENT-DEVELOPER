@@ -1,0 +1,25 @@
+---
+description: Type safety for embeddings and cache handling
+globs: "**/strategy.py", "**/discovery.py", "**/unified_cache.py"
+alwaysApply: false
+---
+
+# Embeddings Type Safety
+
+## Always Convert
+```python
+embedding = self._ensure_float_list(raw_embedding)
+```
+
+## Cache Pattern
+```python
+cache = UnifiedCache(cache_dir)
+if cache.needs_update(file_key, file_hash):
+    # Process and cache
+    cache.put(key, data, metadata)
+```
+
+## Common Issues
+- String embeddings from cache
+- Type errors in similarity calc
+- Fix: Clear cache or add conversion

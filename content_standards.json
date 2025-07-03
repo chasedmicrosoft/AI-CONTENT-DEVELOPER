@@ -1,0 +1,374 @@
+{
+  "version": "1.0",
+  "documentPurpose": "Microsoft documentation content standards for LLM-generated content",
+  
+  "contentTypes": [
+    {
+      "name": "Overview",
+      "id": "overview",
+      "purpose": "For new customers. To explain the service, technology, or functionality from a technical point of view. It isn't intended to define benefits or value prop; that would be in marketing content.",
+      "description": "An article explaining the service from a technical point of view. And/or an article comparing features across related services/projects.",
+      "frontMatter": {
+        "title": "[Service Name] overview",
+        "description": "1-2 sentence summary",
+        "ms.topic": "overview"
+      },
+      "requiredSections": [
+        "Introduction", 
+        "Categories/Features", 
+        "Details", 
+        "Next Steps/Related content"
+      ],
+      "sectionOrder": [
+        {"name": "Introduction", "position": 1, "required": true},
+        {"name": "Categories/Features", "position": 2, "required": true, "allowMultiple": true},
+        {"name": "Details", "position": 3, "required": false},
+        {"name": "Next Steps", "position": 99, "required": true, "terminal": true, "alternateNames": ["Related content", "Next step"]}
+      ],
+      "terminalSections": ["Next Steps", "Related content", "Next step"],
+      "markdownTemplate": "---\ntitle: [Follow SEO guidance at https://review.learn.microsoft.com/en-us/help/platform/seo-meta-title]\ndescription: \"[Article description].\"\nauthor: [your GitHub alias]\nms.author: [your Microsoft alias or a team alias]\nms.service: [the approved service name]\nms.topic: overview #Don't change\nms.date: [mm/dd/yyyy]\n\n#customer intent: As a <role>, I want <what> so that <why>.\n\n---\n\n# What is [product or service]?\n\n[Introduce and explain the purpose of the article.]\n\n## [Feature section]\n\n[Introduce a section that describes a feature.]\n\n## Related content\n\n- [Related article title](link.md)\n- [Related article title](link.md)\n- [Related article title](link.md)"
+    },
+    {
+      "name": "Concept",
+      "id": "concept",
+      "purpose": "When you want to: - explain what something is and define its critical functions - describe how something works or what happens when something is done - provide guidelines for completing a job task in varied situations.",
+      "description": "In-depth explanation of functionality related to a service(s) that are fundamental to understanding and use.",
+      "frontMatter": {
+        "title": "Clear descriptive title",
+        "description": "1-2 sentence summary",
+        "ms.topic": "concept-article"
+      },
+      "requiredSections": [
+        "Introduction", 
+        "Concept Sections", 
+        "Related Content"
+      ],
+      "sectionOrder": [
+        {"name": "Introduction", "position": 1, "required": true},
+        {"name": "Prerequisites", "position": 2, "required": false},
+        {"name": "Concept Sections", "position": 3, "required": true, "allowMultiple": true},
+        {"name": "Related content", "position": 99, "required": true, "terminal": true, "alternateNames": ["Next steps", "See also"]}
+      ],
+      "terminalSections": ["Related content", "Next steps", "See also"],
+      "markdownTemplate": "---\ntitle: [Follow SEO guidance at https://review.learn.microsoft.com/en-us/help/platform/seo-meta-title]\ndescription: \"[Article description].\"\nauthor: [your GitHub alias]\nms.author: [your Microsoft alias or a team alias]\nms.service: [the approved service name]\nms.topic: concept-article #Don't change.\nms.date: [mm/dd/yyyy]\n\n#customer intent: As a <role>, I want <what> so that <why>.\n\n---\n\n# [noun phrase] concept(s)\n\nor\n\n# [noun] overview\n\n[Introduce and explain the purpose of the article.]\n\n## Prerequisites\n\n## [Main idea]\n\n[Describe a main idea.]\n\n## Related content\n\n- [Related article title](link.md)\n- [Related article title](link.md)\n- [Related article title](link.md)"
+    },
+    {
+      "name": "Quickstart",
+      "id": "quickstart",
+      "purpose": "When you can get the service, technology, or functionality into the hands of new customers in less than 10 minutes. Quickstarts are preferred, but not required if no meaningful functionality can be introduced to new users in under 10 minutes.",
+      "description": "Fundamental day-1 instructions for new customers to quickly try out a specific product/service. The focus is on getting the product/service into the hands of customers so they can use it in their production environment.",
+      "frontMatter": {
+        "title": "Quickstart: Create X using Y",
+        "description": "1-2 sentence summary",
+        "ms.topic": "quickstart"
+      },
+      "requiredSections": [
+        "Introduction", 
+        "Prerequisites", 
+        "Procedure", 
+        "Validation", 
+        "Cleanup", 
+        "Next Steps"
+      ],
+      "sectionOrder": [
+        {"name": "Introduction", "position": 1, "required": true},
+        {"name": "Prerequisites", "position": 2, "required": true},
+        {"name": "Procedure", "position": 3, "required": true, "allowMultiple": true},
+        {"name": "Validation", "position": 4, "required": false},
+        {"name": "Clean up resources", "position": 5, "required": true, "alternateNames": ["Cleanup", "Clean up"]},
+        {"name": "Next step", "position": 99, "required": true, "terminal": true, "alternateNames": ["Next steps", "Related content"]}
+      ],
+      "terminalSections": ["Next step", "Next steps", "Related content"],
+      "markdownTemplate": "---\ntitle: [Follow SEO guidance at https://review.learn.microsoft.com/en-us/help/platform/seo-meta-title]\ndescription: \"[Article description].\"\nauthor: [your GitHub alias]\nms.author: [your Microsoft alias or a team alias]\nms.service: [the approved service name]\nms.topic: quickstart  #Don't change\nms.date: [mm/dd/yyyy]\n\n#customer intent: As a <role>, I want <what> so that <why>.\n\n---\n\n# Quickstart: [verb] * [noun]\n\n[Introduce and explain the purpose of the article.]\n\nIf you don't have a service subscription, create a free\ntrial account . . .\n\n## Prerequisites\n\n## Open [Cloud Shell, Azure CLI, or PowerShell]\n\n## [verb] * [noun]\n\n[Introduce a task and its role in completing the process.]\n\n1. Procedure step\n1. Procedure step\n1. Procedure step\n\n## Clean up resources\n\n## Next step -or- Related content\n\n> [!div class=\"nextstepaction\"]\n> [Next sequential article title](link.md)\n\n-or-\n\n- [Related article title](link.md)\n- [Related article title](link.md)\n- [Related article title](link.md)"
+    },
+    {
+      "name": "How-To Guide",
+      "id": "howto",
+      "purpose": "To provide the steps for completing a task. To help customers complete tasks in their own environment. How-to guides differ from tutorials in that they can include optional information, explanations, and information to help inform decisions.",
+      "description": "Procedural articles that show the customer how to complete a task.",
+      "frontMatter": {
+        "title": "Verb-first action title",
+        "description": "1-2 sentence summary",
+        "ms.topic": "how-to"
+      },
+      "requiredSections": [
+        "Introduction", 
+        "Prerequisites", 
+        "Procedure", 
+        "Verification", 
+        "Next Steps"
+      ],
+      "sectionOrder": [
+        {"name": "Introduction", "position": 1, "required": true},
+        {"name": "Prerequisites", "position": 2, "required": true},
+        {"name": "Steps", "position": 3, "required": true, "alternateNames": ["Procedure", "Instructions"], "allowMultiple": true},
+        {"name": "Verification", "position": 4, "required": false},
+        {"name": "Next Steps", "position": 99, "required": true, "terminal": true, "alternateNames": ["Related content", "See also"]}
+      ],
+      "terminalSections": ["Next Steps", "Related content", "See also"],
+      "markdownTemplate": "---\ntitle: [Follow SEO guidance at https://review.learn.microsoft.com/en-us/help/platform/seo-meta-title]\ndescription: \"[Article description].\"\nauthor: [your GitHub alias]\nms.author: [your Microsoft alias or a team alias]\nms.service: [the approved service name]\nms.topic: how-to #Don't change.\nms.date: [mm/dd/yyyy]\n\n#customer intent: As a <role>, I want <what> so that <why>.\n\n---\n\n# How to [complete a task]\n\n[Introduce and explain the purpose of the article.]\n\n## Prerequisites\n\n## Steps\n\n1. Step one\n1. Step two\n1. Step three\n\n## Related content\n\n- [Related article title](link.md)\n- [Related article title](link.md)\n- [Related article title](link.md)"
+    },
+    {
+      "name": "Tutorial",
+      "id": "tutorial",
+      "purpose": "To show the single best procedure for completing a customer task.",
+      "description": "Scenario-based procedures for top customer tasks. The focus is on showing the customer how to do the task, not on helping them set up their own environment.",
+      "frontMatter": {
+        "title": "Tutorial: Action-oriented title",
+        "description": "1-2 sentence summary",
+        "ms.topic": "tutorial"
+      },
+      "requiredSections": [
+        "Introduction", 
+        "Prerequisites", 
+        "Learning Steps", 
+        "Cleanup", 
+        "Next Steps"
+      ],
+      "sectionOrder": [
+        {"name": "Introduction", "position": 1, "required": true},
+        {"name": "Prerequisites", "position": 2, "required": true},
+        {"name": "Learning Steps", "position": 3, "required": true, "allowMultiple": true},
+        {"name": "Clean up resources", "position": 4, "required": true, "alternateNames": ["Cleanup"]},
+        {"name": "Next step", "position": 99, "required": true, "terminal": true, "alternateNames": ["Next steps", "Related content"]}
+      ],
+      "terminalSections": ["Next step", "Next steps", "Related content"],
+      "markdownTemplate": "---\ntitle: [Follow SEO guidance at https://review.learn.microsoft.com/en-us/help/platform/seo-meta-title]\ndescription: \"[Article description].\"\nauthor: [your GitHub alias]\nms.author: [your Microsoft alias or a team alias]\nms.service: [the approved service name]\nms.topic: tutorial  #Don't change.\nms.date: [mm/dd/yyyy]\n\n#customer intent: As a <role>, I want <what> so that <why>.\n\n---\n\n# Tutorial: [verb] * [noun]\n\n[Introduce and explain the purpose of the article.]\n\nIn this tutorial, you:\n\n> [!div class=\"checklist\"]\n> * [Tell the user what they'll do in the tutorial]\n> * [Each of these bullet points align with a key H2]\n> * [Use these green checkmarks]\n\nIf you don't have a service subscription, create a free\ntrial account . . .\n\n## Prerequisites\n\n## Open [Cloud Shell, Azure CLI, or PowerShell]\n\n## [verb] * [noun]\n\n[Introduce a task and its role in completing the process.]\n\n1. Procedure step\n1. Procedure step\n1. Procedure step\n\n## Clean up resources\n\n## Next step -or- Related content\n\n> [!div class=\"nextstepaction\"]\n> [Next sequential article title](link.md)\n\n-or-\n\n* [Related article title](link.md)\n* [Related article title](link.md)\n* [Related article title](link.md)"
+    }
+  ],
+  
+  "requiredFrontMatter": [
+    {
+      "name": "author",
+      "description": "The author of the document (GitHub alias)"
+    },
+    {
+      "name": "ms.author",
+      "description": "The Microsoft alias of the author or a team alias"
+    },
+    {
+      "name": "ms.date",
+      "value": "Current date (MM/DD/YYYY)",
+      "description": "The date the document was published or last updated"
+    },
+    {
+      "name": "ms.service",
+      "description": "The Azure service or product the document relates to (the approved service name)"
+    }
+  ],
+  
+  "coreGuidelines": [
+    "Follow patterns exactly: Use the exact formatting patterns shown in examples",
+    "Maintain section structure: Include all required sections in the specified order",
+    "Use appropriate tone: Keep content professional, clear, and objective",
+    "Respect content type: Each content type has specific requirements and format",
+    "Validate all output: Ensure generated content meets the requirements for the content type",
+    "Include all front matter: Always generate required front matter fields",
+    "Follow naming conventions: Use consistent naming for files and services"
+  ],
+  
+  "customerIntent": {
+    "format": "As a <role>, I want <what> so that <why>.",
+    "location": "In front matter as #customer intent comment",
+    "examples": [
+      "As a developer, I want to deploy a containerized application so that I can scale it efficiently.",
+      "As an IT administrator, I want to configure private networking so that my resources are secure.",
+      "As a database architect, I want to understand data partitioning strategies so that I can optimize performance."
+    ]
+  },
+  
+  "formattingElements": [
+    {
+      "name": "Note",
+      "format": "> [!NOTE]\n> Important information.",
+      "example": "> [!NOTE]\n> Important information."
+    },
+    {
+      "name": "Warning",
+      "format": "> [!WARNING]\n> Critical information.",
+      "example": "> [!WARNING]\n> Critical information."
+    },
+    {
+      "name": "Tip",
+      "format": "> [!TIP]\n> Helpful advice.",
+      "example": "> [!TIP]\n> Helpful advice."
+    },
+    {
+      "name": "Image",
+      "format": ":::image type=\"content\" source=\"./media/folder-name/image-name.png\" alt-text=\"Description\":::",
+      "example": ":::image type=\"content\" source=\"./media/folder-name/image-name.png\" alt-text=\"Description\":::"
+    },
+    {
+      "name": "Link",
+      "format": "[Link text](path-to-article.md)",
+      "example": "[Link text](path-to-article.md)"
+    },
+    {
+      "name": "Next step link",
+      "format": "> [!div class=\"nextstepaction\"]\n> [Text](path)",
+      "example": "> [!div class=\"nextstepaction\"]\n> [Text](path)"
+    },
+    {
+      "name": "Code block",
+      "format": "```language\ncode\n```",
+      "example": "```console\ncommand\n```"
+    },
+    {
+      "name": "Tab Groups",
+      "format": "#### [Tab Name](#tab/tab-id)\nContent for this tab\n\n#### [Tab Name 2](#tab/tab-id-2)\nContent for second tab\n\n---",
+      "example": "#### [Azure portal](#tab/azure-portal)\nPortal instructions\n\n#### [Azure CLI](#tab/azure-cli)\nCLI commands\n\n---"
+    },
+    {
+      "name": "UI elements",
+      "format": "**Bold Text**",
+      "example": "**Bold Text**"
+    },
+    {
+      "name": "Variables",
+      "format": "<placeholder-name>",
+      "example": "<subscription-id>"
+    },
+    {
+      "name": "Checklist",
+      "format": "> [!div class=\"checklist\"]\n> * Item 1\n> * Item 2\n> * Item 3",
+      "example": "> [!div class=\"checklist\"]\n> * Create a resource group\n> * Create a storage account\n> * Upload data to storage"
+    }
+  ],
+  
+  "commonTabGroups": [
+    {
+      "name": "Interface Modality",
+      "purpose": "Present multiple methods for accomplishing the same task",
+      "tabs": ["Azure portal", "Azure CLI", "Azure PowerShell", "ARM template", "Bicep", "REST API"]
+    },
+    {
+      "name": "Decision Tree",
+      "purpose": "Provide different paths in a decision tree",
+      "example": ["Upgrade OS", "Downgrade OS"]
+    }
+  ],
+  
+  "seoGuidelines": {
+    "title": {
+      "pattern": "Follow pattern, 40-60 chars",
+      "example": "Configure Azure Storage firewall rules"
+    },
+    "description": {
+      "pattern": "What + Why, 120-155 chars",
+      "example": "Learn how to configure Azure Storage firewall rules to secure your storage resources."
+    },
+    "keywords": {
+      "pattern": "First paragraph, H2/H3 headings",
+      "example": "Include 'Azure Storage' and 'firewall' in introduction"
+    },
+    "links": {
+      "pattern": "Descriptive, keyword-rich",
+      "example": "[Configure storage security](path) NOT [Click here](path)"
+    }
+  },
+  
+  "imageGuidelines": {
+    "naming": {
+      "fileNames": "lowercase-hyphenated-descriptive.png",
+      "folderStructure": "./media/article-name/",
+      "screenshotPrefix": "screenshot-",
+      "diagramPrefix": "diagram-"
+    },
+    "bestPractices": [
+      "Use 1:1 scale screenshots (100% browser zoom)",
+      "Highlight important UI elements with red rectangles when needed",
+      "Diagrams should use Microsoft standard colors and styling",
+      "Prefer PNG format for screenshots and diagrams",
+      "Keep file size under 200KB where possible",
+      "Include descriptive alt text for accessibility"
+    ],
+    "syntax": ":::image type=\"content\" source=\"./media/folder-name/image-name.png\" alt-text=\"Descriptive alt text that explains the image\" border=\"false\":::"
+  },
+  
+  "codeGuidelines": {
+    "languages": [
+      {"name": "Azure CLI", "syntax": "```azurecli", "useFor": "Azure CLI commands"},
+      {"name": "PowerShell", "syntax": "```powershell", "useFor": "Azure PowerShell commands"},
+      {"name": "Bash", "syntax": "```bash", "useFor": "Shell scripts"},
+      {"name": "C#", "syntax": "```csharp", "useFor": "C# code"},
+      {"name": "JSON", "syntax": "```json", "useFor": "JSON configuration"},
+      {"name": "YAML", "syntax": "```yaml", "useFor": "YAML files"},
+      {"name": "Console", "syntax": "```console", "useFor": "Command line output"},
+      {"name": "Output", "syntax": "```output", "useFor": "Command results"}
+    ],
+    "bestPractices": [
+      "Include complete, working code that can be copied and run",
+      "Show output when helpful for understanding",
+      "Use placeholders consistently with < > symbols",
+      "Include comments for complex sections",
+      "Use proper indentation for readability",
+      "Ensure code follows best security practices"
+    ]
+  },
+  
+  "securityGuidelines": [
+    "Never include real credentials, connection strings, or secrets in examples",
+    "Always use placeholders with descriptive names in angle brackets",
+    "Show how to use managed identities and Azure Key Vault where appropriate",
+    "For sensitive operations, include security validation steps",
+    "Explicitly mention the required permissions using RBAC roles",
+    "Include security warnings for potentially harmful operations",
+    "Show the most secure approach as the primary/default method"
+  ],
+  
+  "processingInstructions": [
+    "Identify the content type from the available types",
+    "Apply the exact structure and front matter for that content type",
+    "Include all required sections in the proper order",
+    "Use Microsoft-specific formatting for all elements (images, notes, code)",
+    "Apply tab groups for multiple interfaces or decision paths",
+    "Follow all guidelines for SEO, security, code samples, and localization",
+    "Include customer intent statement in front matter following the user story format"
+  ],
+  
+  "templateEnforcementRules": [
+    {
+      "rule": "Section Order Enforcement",
+      "description": "All sections must appear in the order specified by the content type's sectionOrder",
+      "enforcement": "strict"
+    },
+    {
+      "rule": "Terminal Section Protection",
+      "description": "No content may be added after terminal sections (Next Steps, Related content, See also)",
+      "enforcement": "strict",
+      "terminalSections": ["Next Steps", "Next steps", "Next step", "Related content", "See also", "Conclusion", "Related Documentation", "Additional Resources", "Further Reading", "Learn More", "References"]
+    },
+    {
+      "rule": "Required Section Validation",
+      "description": "All required sections must be present in the document",
+      "enforcement": "strict"
+    },
+    {
+      "rule": "Section Naming Consistency",
+      "description": "Use the primary section name from sectionOrder, not alternates",
+      "enforcement": "recommended"
+    },
+    {
+      "rule": "Content Placement Rules",
+      "description": "New content must be placed in appropriate existing sections or as new sections before terminal sections",
+      "enforcement": "strict"
+    }
+  ],
+  
+  "sectionPlacementGuidelines": {
+    "forUpdates": [
+      "Identify the content type of the existing document",
+      "Check the sectionOrder for that content type",
+      "Never add content after terminal sections",
+      "Place new sections based on their position value",
+      "If adding to an existing section, preserve its position",
+      "Terminal sections must remain at the end of the document"
+    ],
+    "forCreation": [
+      "Follow the exact sectionOrder for the content type",
+      "Include all required sections",
+      "Place optional sections in their designated positions",
+      "Always end with the terminal section"
+    ]
+  }
+} 

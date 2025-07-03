@@ -1,0 +1,22 @@
+---
+description: Documentation update checklist when files change
+globs: ARCHITECTURE.md, README.md
+alwaysApply: false
+---
+
+# Documentation Updates
+
+## When Editing Code → Update Docs
+
+| Code Change | Update ARCHITECTURE.md | Update README.md |
+|-------------|----------------------|------------------|
+| New processor | Module structure | - |
+| New CLI option | - | Command options table |
+| New phase logic | Three-phase workflow | Features section |
+| Config changes | Configuration section | - |
+| New output dir | - | Output structure |
+
+## Quick Check
+- New file? → Add to ARCHITECTURE.md structure
+- User-facing? → Update README.md
+- Breaking change? → Update both

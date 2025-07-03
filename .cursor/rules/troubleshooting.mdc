@@ -1,0 +1,24 @@
+---
+description: Quick troubleshooting guide for common errors
+globs: 
+alwaysApply: false
+---
+
+# Quick Troubleshooting
+
+## Common Fixes
+1. **Missing API key**: `export OPENAI_API_KEY="key"`
+2. **Import error**: `export PYTHONPATH=$PYTHONPATH:$(pwd)`
+3. **Cache error**: `rm -rf llm_outputs/embeddings/`
+4. **Type error**: Clear cache, check `_ensure_float_list()`
+
+## Debug Mode
+```bash
+python main.py <args> --debug-similarity
+```
+
+## Reset Options
+- `./scripts/reset.sh cache` - Clear embeddings
+- `./scripts/reset.sh full` - Complete reset
+
+See [validation-troubleshooting.mdc](mdc:.cursor/rules/validation-troubleshooting.mdc) for details.

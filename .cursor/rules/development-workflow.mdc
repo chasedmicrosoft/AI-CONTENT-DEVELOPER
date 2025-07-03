@@ -1,0 +1,26 @@
+---
+description: Plan-Do-Summary workflow for structured development
+globs: plans/*.md
+alwaysApply: false
+---
+
+# Development Workflow
+
+Use @development-workflow to access.
+
+## Three Documents Required
+1. **Plan**: `plans/<feature>.md`
+2. **Todo**: `plans/<feature>_todo.md`  
+3. **Summary**: `plans/<feature>_summary.md`
+
+## Templates
+- [TEMPLATE_PLAN.md](mdc:plans/TEMPLATE_PLAN.md)
+- [TEMPLATE_TODO.md](mdc:plans/TEMPLATE_TODO.md)
+- [TEMPLATE_SUMMARY.md](mdc:plans/TEMPLATE_SUMMARY.md)
+
+## Process
+1. Create plan before coding
+2. Track progress in todo
+3. Document results in summary
+
+See full workflow in [development-workflow.mdc](mdc:.cursor/rules/development-workflow.mdc)

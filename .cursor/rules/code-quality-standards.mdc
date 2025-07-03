@@ -1,0 +1,32 @@
+---
+description: Comprehensive code quality and refactoring patterns
+globs: "**/*.py"
+alwaysApply: false
+---
+
+# Code Quality Standards
+
+Access with @code-quality-standards.
+
+## Core Principles
+1. **Atomic Units** - Single responsibility
+2. **Clear Names** - Self-documenting
+3. **No Deep Nesting** - Max 3 levels
+4. **File Limit** - 500 lines
+
+## Refactoring Patterns
+
+### Extract Method
+Break complex methods into atomic helpers.
+
+### Guard Clauses
+Use early returns instead of nested ifs.
+
+### Strategy Pattern
+Replace large switch/if-else blocks.
+
+## File Management
+- Check sizes: `find . -name "*.py" -exec wc -l {} + | sort -rn`
+- Split by responsibility or feature
+
+See full patterns: [code-quality-standards.mdc](mdc:.cursor/rules/code-quality-standards.mdc)

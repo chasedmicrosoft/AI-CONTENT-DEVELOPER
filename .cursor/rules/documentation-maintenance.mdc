@@ -1,0 +1,32 @@
+---
+description: Documentation maintenance checklist for code changes
+globs: "**/*.py"
+alwaysApply: false
+---
+# Documentation Maintenance
+
+Access with @documentation-maintenance.
+
+## Update Triggers
+
+### ARCHITECTURE.md
+- New modules/processors
+- Workflow changes
+- Config updates
+- Cache modifications
+
+### README.md
+- CLI options
+- User features
+- Setup changes
+- Output structure
+
+## Quick Map
+| Change | ARCH | README |
+|--------|------|--------|
+| New file | ✓ | - |
+| New option | - | ✓ |
+| New phase | ✓ | ✓ |
+| Bug fix | - | - |
+
+See full guide: [documentation-maintenance.mdc](mdc:.cursor/rules/documentation-maintenance.mdc)

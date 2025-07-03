@@ -1,0 +1,6 @@
+# Requirements for pregen_embeddings.py standalone script
+openai>=1.82.0
+azure-identity>=1.17.0
+python-dotenv==1.0.0
+PyYAML==6.0.1
+GitPython==3.1.41 

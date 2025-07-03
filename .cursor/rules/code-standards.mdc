@@ -1,0 +1,23 @@
+---
+description: Code quality standards - atomic methods, naming, file size limits
+globs: 
+alwaysApply: false
+---
+
+# Code Standards
+
+## Core Rules
+1. **Atomic methods** - ONE responsibility each
+2. **File limit** - 500 lines max
+3. **Nesting** - 3 levels max
+4. **Naming** - self-documenting
+
+## Patterns
+- Guard clauses over nested ifs
+- Extract method for complex logic
+- Type hints everywhere
+
+## Current Status
+- [strategy.py](mdc:content_developer/processors/strategy.py) - 463 lines ⚠️
+
+See [code-quality-standards.mdc](mdc:.cursor/rules/code-quality-standards.mdc) for full patterns.

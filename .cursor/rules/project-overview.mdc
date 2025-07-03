@@ -1,0 +1,24 @@
+---
+description: Core project architecture and entry points
+globs: 
+alwaysApply: true
+---
+
+# AI Content Developer
+
+Three-phase documentation generation system using OpenAI GPT.
+
+## Core Architecture
+- **Entry**: [main.py](mdc:main.py) → [orchestrator.py](mdc:content_developer/orchestrator/orchestrator.py)
+- **Base**: All processors inherit from [SmartProcessor](mdc:content_developer/processors/smart_processor.py)
+- **Phases**: Analysis → Strategy → Generation
+
+## Key Principles
+1. Atomic methods - single responsibility
+2. Type safety - use `_ensure_float_list()` for embeddings
+3. Defensive programming - validate inputs
+4. mkdir() before writing files
+
+## Documentation
+- Architecture: [ARCHITECTURE.md](mdc:ARCHITECTURE.md)
+- Usage: [README.md](mdc:README.md)
