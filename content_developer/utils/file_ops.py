@@ -15,18 +15,18 @@ def read(path: Path, limit: Optional[int] = None) -> str:
         limit: Maximum characters to read. None means read entire file.
     """
     path = Path(path)
-    content = path.read_text()
+    content = path.read_text(encoding='utf-8')
     return content[:limit] if limit else content
 
 
 def write(path: Path, content: str) -> None:
     """Write text to file"""
-    Path(path).write_text(content)
+    Path(path).write_text(content, encoding='utf-8')
 
 
 def save_json(path: Path, data: Dict[str, Any]) -> None:
     """Save data as JSON"""
-    Path(path).write_text(json.dumps(data, indent=2))
+    Path(path).write_text(json.dumps(data, indent=2), encoding='utf-8')
 
 
 def load_json(path: Path) -> Dict[str, Any]:
@@ -36,7 +36,7 @@ def load_json(path: Path) -> Dict[str, Any]:
         return {}
     
     try:
-        return json.loads(path.read_text())
+        return json.loads(path.read_text(encoding='utf-8'))
     except json.JSONDecodeError:
         return {}
 

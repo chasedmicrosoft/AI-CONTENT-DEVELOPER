@@ -110,7 +110,7 @@ class ContentStrategyProcessor(LLMNativeProcessor):
         standards_path = Path('content_standards.json')
         if standards_path.exists():
             try:
-                with open(standards_path, 'r') as f:
+                with open(standards_path, 'r', encoding='utf-8') as f:
                     return json.load(f)
             except Exception as e:
                 logger.warning(f"Failed to load content standards: {e}")
