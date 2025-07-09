@@ -134,7 +134,7 @@ class ContentGenerationProcessor(LLMNativeProcessor):
         
         # Load content standards
         try:
-            with open('content_standards.json', 'r') as f:
+            with open('content_standards.json', 'r', encoding='utf-8') as f:
                 content_standards = json.load(f)
         except Exception as e:
             logger.warning(f"Failed to load content standards: {e}")
@@ -265,7 +265,7 @@ class ContentGenerationProcessor(LLMNativeProcessor):
         
         # Load content standards from file
         try:
-            with open('content_standards.json', 'r') as f:
+            with open('content_standards.json', 'r', encoding='utf-8') as f:
                 content_standards = json.load(f)
         except Exception as e:
             logger.warning(f"Failed to load content standards: {e}")
